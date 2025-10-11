@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kkppzz apps - Innovative Mobile Solutions</title>
+    <style>
+        /* --- Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        /* --- CSS Variables for Theming --- */
+        :root {
+            --bg-color: #f4f7fc;
+            --text-color: #333;
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --card-bg: #ffffff;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --glossy-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+        }
+
+        /* --- Dark Mode Theme --- */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --primary-color: #4dabf7;
+                --primary-hover: #2196f3;
+                --card-bg: #1e1e1e;
+                --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                --glossy-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+            }
+        }
+
+        /* --- General Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* --- Header --- */
+        .main-header {
+            padding: 1rem 0;
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px; /* Adjust height as needed */
+            border-radius: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Glossy Button --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            background-color: var(--primary-color);
+            border-radius: 50px;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--glossy-gradient);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        /* --- Apps Section --- */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .app-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .app-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .app-card .btn {
+            width: 100%;
+        }
+        
+        /* --- Footer --- */
+        .main-footer {
+            background-color: var(--card-bg);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--bg-color);
+        }
+        
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .main-footer p {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .main-footer a {
+             color: var(--primary-color);
+             text-decoration: none;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            #hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .logo-text {
+                font-size: 1.5rem;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+        }
+    </style>
+    
+    <!-- Icons from Font Awesome for social links -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <!-- IMPORTANT: Replace 'kkppzzlogo.jpg' with your logo file -->
+                <img src="images/kkppzzlogo.jpg" alt="kkppzz apps Logo">
+            </a>
+            <a href="#apps" class="btn">Download Apps</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+
+
+    <!-- Apps Section -->
+    <section id="apps">
+        <div class="container">
+            <h2 class="section-title">Our Apps</h2>
+            <div class="apps-grid">
+                <!-- App 1: Auction Royale -->
+                <div class="app-card">
+                    <!-- IMPORTANT: Replace 'Arlogokkppzz.png' with your app logo -->
+                    <img src="images/Arlogokkppzz.png" alt="Auction Royale Logo">
+                    <h3>Auction Royale</h3>
+                    <!-- IMPORTANT: Replace '#' with your actual download link -->
+                    <a href="https://www.mediafire.com/file/jdvew6l6m136rik/app-debug_%252810%2529.apk/file" class="btn" target="_blank">Download</a>
+                </div>
+                
+                <!-- You can add more app cards here in the future -->
+                <!-- 
+                <div class="app-card">
+                    <img src="path/to/another-app-logo.png" alt="Another App Logo">
+                    <h3>Another App</h3>
+                    <a href="#" class="btn" target="_blank">Download</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+        <section id="hero">
+                          <div class="app-card">
+                    <!-- IMPORTANT: Replace 'Arlogokkppzz.png' with your app logo -->
+                    <img src="images/kkppzzlogo.jpg" alt="Auction Royale Logo"></div>
+        <h1>kkppzz apps</h1>
+        <p>Crafting Innovative Mobile Experiences</p>
+        <a href="#apps" class="btn">View Our Work</a>
+    </section>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+             <h3>Get In Touch</h3>
+             <p>Email us at: <a href="mailto:kv39311@gmail.com">kv39311@gmail.com</a></p>
+             <br>
+            <div class="social-links">
+                <!-- IMPORTANT: Replace '#' with your actual social media links -->
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 kkppzz apps. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for any future interactivity.
+        // For now, it's kept minimal as requested.
+        console.log("Welcome to the kkppzz apps website!");
+    </script>
+</body>
+</html>
