@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kkppzz apps - Innovative Mobile Solutions </title>
     <style>
-        /* --- Google Fonts --- */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-        /* --- CSS Variables for Theming --- */
         :root {
             --bg-color: #f4f7fc;
             --text-color: #333;
@@ -18,7 +15,6 @@
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --glossy-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
         }
-
         @media (prefers-color-scheme: dark) {
             :root {
                 --bg-color: #121212;
@@ -30,15 +26,8 @@
                 --glossy-gradient: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
             }
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
@@ -46,14 +35,12 @@
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
         }
-
         .container {
             max-width: 1100px;
             margin: auto;
             padding: 0 20px;
             overflow: hidden;
         }
-
         .main-header {
             padding: 1rem 0;
             background: var(--card-bg);
@@ -69,7 +56,6 @@
         }
         .logo img { height: 50px; border-radius: 10px; }
         .logo-text { font-size: 1.8rem; font-weight: 700; color: var(--text-color); }
-
         #hero {
             height: 90vh;
             display: flex;
@@ -81,7 +67,6 @@
         }
         #hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; }
         #hero p { font-size: 1.5rem; font-weight: 300; max-width: 600px; margin-bottom: 2rem; }
-
         .btn {
             display: inline-block;
             padding: 15px 35px;
@@ -107,7 +92,6 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
         }
-
         section { padding: 80px 0; }
         .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; font-weight: 600; }
         .apps-grid {
@@ -115,6 +99,11 @@
             grid-template-columns: 1fr;
             gap: 30px;
             justify-items: center;
+        }
+        @media (min-width: 600px) {
+            .apps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         .app-card {
             background: var(--card-bg);
@@ -134,7 +123,6 @@
         }
         .app-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
         .app-card .btn { width: 100%; }
-
         .main-footer {
             background-color: var(--card-bg);
             padding: 40px 0;
@@ -163,7 +151,6 @@
         .social-links svg { width: 24px; height: 24px; }
         .main-footer p { margin-top: 20px; font-size: 0.9rem; }
         .main-footer a { color: var(--primary-color); text-decoration: none; }
-
         @media (max-width: 768px) {
             #hero h1 { font-size: 2.5rem; }
             #hero p { font-size: 1.2rem; }
@@ -195,6 +182,12 @@
                     <img src="Images/Arlogokkppzz.png" alt="Auction Royale Logo">
                     <h3>Auction Royale</h3>
                     <a href="https://www.mediafire.com/file/hh0ck6qcvfqwg62/AuctionRoyale.apk/file" class="btn" target="_blank">Download</a>
+                </div>
+                <!-- App 2: Cricket Overlay -->
+                <div class="app-card">
+                    <img src="Images/Cr.png" alt="Cricket Overlay Logo">
+                    <h3>Cricket Overlay</h3>
+                    <button class="btn" disabled style="cursor:not-allowed; opacity:0.8;">Coming Soon</button>
                 </div>
             </div>
         </div>
