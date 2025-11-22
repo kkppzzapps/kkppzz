@@ -106,7 +106,7 @@
         }
         @media (min-width: 600px) {
             .apps-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
         .app-card {
@@ -124,6 +124,7 @@
             width: 120px; height: 120px;
             border-radius: 25px; margin-bottom: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
         }
         .app-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
         .app-card .btn { width: 100%; }
@@ -170,7 +171,7 @@
     <header class="main-header">
         <div class="container">
             <a href="#" class="logo">
-                <img src="Images/kkppzzlogo.jpg" alt="kkppzz apps Logo">
+                <img src="Images/kkppzzlogo.jpg" alt="kkppzz apps Logo" onerror="this.src='https://placehold.co/50x50?text=Logo'">
             </a>
             <a href="#apps" class="btn">Download Apps</a>
         </div>
@@ -183,13 +184,21 @@
             <div class="apps-grid">
                 <!-- App 1: Auction Royale -->
                 <div class="app-card">
-                    <img src="Images/Arlogokkppzz.png" alt="Auction Royale Logo">
+                    <img src="Images/Arlogokkppzz.png" alt="Auction Royale Logo" onerror="this.src='https://placehold.co/120x120?text=Auction+Royale'">
                     <h3>Auction Royale</h3>
                     <a href="AR[1].html" class="btn" target="_blank">Download</a>
                 </div>
-                <!-- App 2: Cricket Overlay -->
+
+                <!-- App 2: City Runner Mobile (New) -->
                 <div class="app-card">
-                    <img src="Images/Cr[1].png" alt="Cricket Overlay Logo">
+                    <img src="Images/CTR.png" alt="City Runner Mobile Logo" onerror="this.src='https://placehold.co/120x120?text=CTR'">
+                    <h3>City Runner Mobile</h3>
+                    <a href="#" class="btn">Download</a>
+                </div>
+
+                <!-- App 3: Cricket Overlay -->
+                <div class="app-card">
+                    <img src="Images/Cr[1].png" alt="Cricket Overlay Logo" onerror="this.src='https://placehold.co/120x120?text=Cricket+Overlay'">
                     <h3>Cricket Overlay</h3>
                     <button class="btn" disabled style="cursor:not-allowed; opacity:0.8;">Coming Soon</button>
                 </div>
@@ -200,8 +209,8 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="app-card">
-            <img src="Images/kkppzzlogo.jpg" alt="kkppzz apps Logo">
+        <div class="app-card" style="margin-bottom: 2rem;">
+            <img src="Images/kkppzzlogo.jpg" alt="kkppzz apps Logo" onerror="this.src='https://placehold.co/120x120?text=Logo'">
         </div>
         <h1>kkppzz apps</h1>
         <p>Crafting Innovative Mobile Experiences</p>
@@ -243,4 +252,3 @@
     </script>
 </body>
 </html>
-
